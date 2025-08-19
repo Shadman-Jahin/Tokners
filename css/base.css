@@ -413,7 +413,7 @@ strong {
     font: 700 normal 1.4rem/normal "Montserrat", sans-serif;
     text-transform: uppercase;
     border: .3rem solid transparent;
-    padding: 1.7rem 4rem;
+    padding: 1.5rem 4rem;
     border-radius: 5rem;
     transition: 0.3s;
 }
@@ -460,8 +460,8 @@ strong {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(45rem, 100%), 54rem));
+    grid-template-columns: repeat(auto-fit, minmax(min(45rem, 100%), 53rem));
     place-content: center;
     place-items: center;
-    gap: 4rem;
+    /* gap: 4rem; */
 }
