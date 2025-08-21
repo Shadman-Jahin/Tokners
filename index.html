@@ -4,12 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FAVICON -->
     <link rel="shortcut icon" href="images/different/logo.svg" type="image/x-icon">
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <!-- LENIS -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.8/dist/lenis.css">
+    <script src="https://unpkg.com/lenis@1.3.8/dist/lenis.min.js"></script>
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1 /dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- BOOTSTRAP 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
@@ -27,19 +34,41 @@
 
 <body>
     <header>
+        <label for="slider-toggler" id="overlay"></label>
         <nav>
             <div class="logo">
-                <img src="images/header/main-logo.svg" alt="logo" width="220">
+                <img loading="lazy" src="images/header/main-logo.svg" alt="logo" width="220">
             </div>
-            <div class="nav-items ms-auto">
-                <a href="#">Our team</a>
-                <a href="#">Tokens</a>
-                <a href="#">Connect wallet</a>
-                <a href="#">Lightpaper</a>
-            </div>
-            <div class="sign-in">
-                <a href="#">Sign In</a>
-                <button type="button" class="btn-white">Sign Up</button>
+            <input type="checkbox" name="toggle slider" id="slider-toggler">
+            <label for="slider-toggler" id="slider-label-out">
+                <svg width="4rem" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                    <path
+                        d="M64 160C64 142.3 78.3 128 96 128L480 128C497.7 128 512 142.3 512 160C512 177.7 497.7 192 480 192L96 192C78.3 192 64 177.7 64 160zM128 320C128 302.3 142.3 288 160 288L544 288C561.7 288 576 302.3 576 320C576 337.7 561.7 352 544 352L160 352C142.3 352 128 337.7 128 320zM512 480C512 497.7 497.7 512 480 512L96 512C78.3 512 64 497.7 64 480C64 462.3 78.3 448 96 448L480 448C497.7 448 512 462.3 512 480z"
+                        fill="#3d0082" />
+                </svg>
+            </label>
+
+
+            <div class="slider">
+                <label for="slider-toggler" id="slider-label-in">
+                    <svg width="4rem" height="4rem" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                        <path
+                            d="M224 160C241.7 160 256 145.7 256 128C256 110.3 241.7 96 224 96L160 96C107 96 64 139 64 192L64 448C64 501 107 544 160 544L224 544C241.7 544 256 529.7 256 512C256 494.3 241.7 480 224 480L160 480C142.3 480 128 465.7 128 448L128 192C128 174.3 142.3 160 160 160L224 160zM566.6 342.6C579.1 330.1 579.1 309.8 566.6 297.3L438.6 169.3C426.1 156.8 405.8 156.8 393.3 169.3C380.8 181.8 380.8 202.1 393.3 214.6L466.7 288L256 288C238.3 288 224 302.3 224 320C224 337.7 238.3 352 256 352L466.7 352L393.3 425.4C380.8 437.9 380.8 458.2 393.3 470.7C405.8 483.2 426.1 483.2 438.6 470.7L566.6 342.7z"
+                            fill="#3d0082" />
+
+                    </svg>
+                </label>
+
+                <div class="nav-items">
+                    <a href="#different">Our team</a>
+                    <a href="#coming">Tokens</a>
+                    <a href="#details">Connect wallet</a>
+                    <a href="#plan">Lightpaper</a>
+                </div>
+                <div class="sign-in">
+                    <a href="#">Sign In</a>
+                    <button type="button" class="btn-white">Sign Up</button>
+                </div>
             </div>
         </nav>
 
@@ -110,23 +139,388 @@
             </div>
             <div class="grid">
                 <div class="header-text">
-                    <p class="text-2 text-secondary"><b>At Tokners are</b></p>
-                    <h1>Reimagining social media through the power of the blockchain.</h1>
-                    <p class="mt-12">We are creating social media 3.0 with influencers, celebrities and creators being
+                    <p class="text-2 text-secondary" data-aos="fade-right"><b>At Tokners are</b></p>
+                    <h1 data-aos="fade-right" data-aos-delay="300">Reimagining social media through the power of the
+                        blockchain.</h1>
+                    <p class="mt-12" data-aos="fade-right" data-aos-delay="600">We are creating social media 3.0 with
+                        influencers,
+                        celebrities and creators being
                         able to launch
                         their own digital currency by simply creating a profile with media content posted as Non
                         fungible
                         Tokens that can be owned and traded on the Tokners network
                     </p>
 
-                    <button type="button" class="btn-green  mt-16">Learn More</button>
+                    <button data-aos="fade-right" data-aos-offset="0" data-aos-delay="900" type="button"
+                        class="btn-green  mt-16">Learn
+                        More</button>
                 </div>
-                <div class="header-image">
-                    <img src="images/header/hero.png" alt="hero" width="450" class="img-fluid">
+                <div class="header-image" data-aos="fade-left" data-aos-delay="400">
+                    <img loading="lazy" src="images/header/hero.png" alt="hero" width="450" class="img-fluid">
                 </div>
             </div>
         </div>
     </header>
+
+    <main>
+        <!-- * ========================= -->
+        <!-- * DIFFERENT -->
+        <!-- * ========================= -->
+
+        <!-- -------------- -->
+        <!-- BOXES -->
+
+        <section id="box-container">
+            <div class="boxes container">
+                <!-- BOX 1 -->
+                <div class="box" data-aos="flip-right" data-aos-offset="400">
+                    <h2>For <em class="text-primary">Creators</em></h2>
+                    <p class="mt-12">Creators can gain independence through a decentralised digital currency system that
+                        is
+                        dependent on growing and engaging with the community and also their star power. They own
+                        10-15% of the total value of the tokens minted.
+                    </p>
+                    <div class="box-image mt-30">
+                        <img loading="lazy" src="images/different/person1.png" width="300" class="img-fluid"
+                            alt="person with pensil">
+                    </div>
+                </div>
+
+                <!-- BOX 2 -->
+                <div class="box" data-aos="flip-right" data-aos-offset="400">
+                    <h2>For <em class="text-secondary">Hodlers</em></h2>
+                    <p class="mt-12">
+                        Holding social tokens allows the individual to gain access to benefits including
+                        unreleased
+                        content, private communities, direct access to celebrity, early-access to tickets and more as
+                        well
+                        as the ability to trade with other communities in order to gain access to more creator content
+                        with
+                        early token buyers being the biggest winners as the value of the token increases with more
+                        buyers.
+                    </p>
+                    <div class="box-image">
+                        <img loading="lazy" src="images/different/person2.png" width="200" class="img-fluid"
+                            alt="person holding coffee">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <svg id="beforeDifferent" xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1920 528" fill="none">
+            <path
+                d="M2097.45 718.077C2238.32 772.614 2242.45 880.511 2226.9 927.643L2033.27 912.291L-19.9984 912.291L-259.625 261.38C-249.523 212.789 -192.002 121.409 -42.7306 144.618C143.859 173.629 157.32 103.788 199.958 55.7536C242.596 7.71962 301.571 -35.9369 444.97 49.7042C588.37 135.345 736.371 190.741 880.346 117.397C995.526 58.7212 1087.89 73.327 1120.92 82.1769C1153.95 91.0269 1241.24 124.56 1311.65 232.964C1399.66 368.47 1555.53 394.496 1722.54 392.029C1889.55 389.561 1918.8 456.856 1931.7 519.774C1944.61 582.692 1921.35 649.907 2097.45 718.077Z"
+                fill="#1D1534" />
+        </svg>
+        <section id="different">
+
+            <!-- --------------------- -->
+            <!-- TEXT CONTENT -->
+
+            <div class="content container ">
+                <div class="logo-image" data-aos="fade-right">
+                    <img loading="lazy" src="images/different/logo.svg" alt="logo">
+                </div>
+                <h1 class="white" data-aos="fade-up" data-aos-offset="400">What makes us <br> different?</h1>
+                <div class="text" data-aos="fade-down" data-aos-delay="300" data-aos-offset="400">
+                    <p class="text-para-gray"><b>We would only launch tokens with the express permission of the
+                            creators. </b></p>
+                    <p class="text-para-gray">There are several thousand celebrities and creators on twitter, tiktok,
+                        Instagram and YouTube
+                        with followings in the millions who we would be <b> actively engaging </b> before we go viral.
+                    </p>
+                    <p class="text-para-gray">
+                        We would get them on our
+                        platform and they would see the opportunity to create a fan driven digital economy where their
+                        digital content can be traded as NFTs and their most loyal fans can have the monetary value of
+                        their creator's currency increase significantly as they promote their digital currency across
+                        their channels while our native token holders benefit from the Tokners popularity.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 430 1920 248" fill="none">
+            <path
+                d="M98.6108 465.042C-18.2377 455.489 -43.0636 394.719 -40.8705 365.529L-40.8705 0L1961.87 0V365.529C1964.06 394.719 1939.24 455.489 1822.39 465.042C1676.33 476.983 1680.28 518.779 1657.91 552.614C1635.54 586.448 1600.01 620.282 1475 593.414C1350 566.545 1227.62 557.589 1134.19 621.278C1059.45 672.228 987.102 678 960.5 678C933.898 678 861.547 672.228 786.806 621.278C693.38 557.589 571.005 566.545 445.998 593.414C320.991 620.282 285.463 586.448 263.093 552.614C240.724 518.779 244.671 476.983 98.6108 465.042Z"
+                fill="#1D1534" />
+        </svg>
+
+        <!-- * ======================== -->
+        <!-- * PLAN -->
+        <!-- * ======================== -->
+
+        <section id="plan">
+            <!-- PLANE IMAGE -->
+            <img loading="lazy" data-aos="zoom-in-up" data-aos-offset="200" data-aos-delay="500" id="plane"
+                src="images/plan/plane.png" alt="paper plane" width="300">
+
+            <!-- VECTOR -->
+
+            <svg id="line" xmlns="http://www.w3.org/2000/svg" width="1115" height="56" viewBox="0 0 1267 56"
+                fill="none">
+                <path opacity="0.6"
+                    d="M1266.41 54.9996L1250.36 54.9996M790.409 54.9996L1250.36 54.9996M1250.36 54.9996C1232.13 55.081 1195.67 44.1952 1195.67 5.08602e-06M850.696 54.9996C832.464 55.081 796 44.1952 796 0M846.365 54.9996L454.696 54.9996M454.696 54.9996H454.289M454.696 54.9996C454.561 55.0002 454.426 55.0002 454.289 54.9996M454.289 54.9996L394.409 54.9996M454.289 54.9996C435.927 54.9183 400 43.8685 400 0M451.365 54.9996L55.6962 54.9996M55.6962 54.9996H55.2888M55.6962 54.9996C55.5614 55.0002 55.4256 55.0002 55.2888 54.9996M55.2888 54.9996C36.927 54.9183 1 43.8685 1 0"
+                    stroke="black" stroke-width="2" stroke-dasharray="2 2" />
+            </svg>
+
+            <!-- ITEM 1 -->
+            <div class="plan-item" data-aos="zoom-in" data-aos-offset="200">
+                <p class="text-primary"><strong>Q1</strong></p>
+                <h2>2022</h2>
+                <div class="dot"></div>
+                <div class="plan-content mt-40">
+                    <p data-aos="fade-right" data-aos-delay="200" class="text-para-dark">Team set-up</p>
+                    <p data-aos="fade-right" data-aos-delay="400" class="text-para-dark">Launch of informational website
+                    </p>
+                </div>
+            </div>
+
+            <!-- ITEM 2 -->
+            <div class="plan-item" data-aos="zoom-in" data-aos-offset="200">
+                <p class="text-primary"><strong>Q2</strong></p>
+                <h2>2023</h2>
+                <div class="dot"></div>
+                <div class="plan-content mt-40">
+                    <p data-aos="fade-right" data-aos-delay="200" class="text-para-dark">Presale and exchange listings
+                    </p>
+                    <p data-aos="fade-right" data-aos-delay="400" class="text-para-dark">Blockchain development and
+                        launch</p>
+                    <p data-aos="fade-right" data-aos-delay="600" class="text-para-dark">Launch of our MVP</p>
+                    <p data-aos="fade-right" data-aos-delay="800" class="text-para-dark">Influencer agency partnerships
+                    </p>
+                    <p data-aos="fade-right" data-aos-delay="1000" class="text-para-dark">Marketing and promotion</p>
+                </div>
+            </div>
+
+
+            <!-- ITEM 3 -->
+            <div class="plan-item" data-aos="zoom-in" data-aos-offset="200">
+                <p class="text-primary"><strong>Q3</strong></p>
+                <h2>2024</h2>
+                <div class="dot"></div>
+                <div class="plan-content mt-40">
+                    <p data-aos="fade-right" data-aos-delay="200" class="text-para-dark">Celebrity, Creator and
+                        Influencer partnerships</p>
+                    <p data-aos="fade-right" data-aos-delay="400" class="text-para-dark">Expansion of creator
+                        communities on our platform</p>
+                    <p data-aos="fade-right" data-aos-delay="600" class="text-para-dark">More Marketing and promotion
+                    </p>
+                </div>
+            </div>
+
+
+            <!-- ITEM 4 -->
+            <div class="plan-item" data-aos="zoom-in" data-aos-offset="200">
+                <p class="text-primary"><strong>Q4</strong></p>
+                <h2>2025</h2>
+                <div class="dot"></div>
+                <div class="plan-content mt-40">
+                    <p data-aos="fade-right" data-aos-delay="200" class="text-para-dark">Mainstream partnerships</p>
+                    <p data-aos="fade-right" data-aos-delay="400" class="text-para-dark">500 active creator communities
+                    </p>
+                    <p data-aos="fade-right" data-aos-delay="600" class="text-para-dark">2Million active community
+                        members</p>
+                    <p data-aos="fade-right" data-aos-delay="800" class="text-para-dark">More Marketing and promotion
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- * ====================== -->
+        <!-- * COMING -->
+        <!-- * ====================== -->
+
+        <!-- VECTOR -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1916 400" fill="none">
+            <path
+                d="M0.128887 1305.5C-2.06422 1334.69 22.8912 1395.49 139.74 1405.04C263.1 1415.13 279.456 1446.51 295.037 1476.4C297.905 1481.9 300.746 1487.36 304.222 1492.61C326.592 1526.45 362.12 1560.28 487.127 1533.41C612.134 1506.55 734.509 1497.59 827.935 1561.28C902.676 1612.23 975.027 1618 1001.63 1618C1028.23 1618 1100.58 1612.23 1175.32 1561.28C1268.75 1497.59 1391.12 1506.55 1516.13 1533.41C1641.14 1560.28 1676.67 1526.45 1699.04 1492.61C1702.51 1487.36 1705.35 1481.9 1708.22 1476.4C1723.8 1446.51 1740.16 1415.13 1863.52 1405.04C1980.37 1395.49 2005.19 1334.72 2003 1305.53V0H2001.4C1993.91 31.134 1960.24 74.134 1863.52 82.0419C1740.16 92.1276 1723.8 123.509 1708.22 153.403C1705.35 158.904 1702.51 164.355 1699.04 169.614C1676.67 203.448 1641.14 237.282 1516.13 210.414C1391.12 183.545 1268.75 174.589 1175.32 238.278C1100.58 289.228 1028.23 295 1001.63 295C975.027 295 902.676 289.228 827.935 238.278C734.509 174.589 612.134 183.545 487.127 210.414C362.12 237.282 326.592 203.448 304.222 169.614C300.746 164.355 297.905 158.904 295.037 153.403C279.456 123.509 263.1 92.1276 139.74 82.0419C43.0176 74.134 9.3476 31.134 1.86208 0H0.258341L0.128887 1305.5Z"
+                fill="#F2F0F4" />
+        </svg>
+        <section id="coming">
+
+            <!-- MAIN CONTENT -->
+            <div class="container grid">
+                <div class="text">
+                    <h2 data-aos="zoom-in-up" data-aos-offset="200">Tokners is coming</h2>
+                    <p data-aos="fade-left" data-aos-offset="200">
+                        <b>
+                            Cryptocurrency adoption is at less than 1% of the global world population with some
+                            countries
+                            and entities actively fighting against its mass adoption and the smartest developers and
+                            nerds
+                            holding the fort.
+                        </b>
+                    </p>
+
+                    <p data-aos="fade-right" data-aos-offset="200">
+                        Bitcoin was the first, and it has since grown to thousands of tokens launched all
+                        aiming to fix one problem or the other with some quite simply FOMOing the moment. Our goal is
+                        to bring mass adoption to the cryptocurrency space by dumbing it down. How far down? So
+                        down that even a celebrity can explain it in simple words to their followers and have them
+                        download an app, buy into the social currency of their favourite person and watch their
+                        investment as is with other cryptocurrency project.
+                    </p>
+                    <p data-aos="fade-right" data-aos-offset="200">
+                        We are trying to do to this space what
+                        investment apps did for the "nonexistent retail investors". We are gamefying digital currency,
+                        bringing in popular faces instead of hard to understand projects to make it the norm and
+                        inadvertently being the "gateway drug" for a lot of people to finally give this space a real
+                        look.
+                    </p>
+                </div>
+
+                <div class="image" data-aos="zoom-in-left" data-aos-offset="200">
+                    <img loading="lazy" src="images/coming/background.png" width="450" class="img-fluid"
+                        alt="background">
+                    <img loading="lazy" src="images/coming/cloud1.png" width="130" class="img-fluid" alt="cloud1">
+                    <img loading="lazy" src="images/coming/cloud2.png" width="270" class="img-fluid" alt="cloud2">
+                    <img loading="lazy" src="images/coming/rocket.png" width="200" class="img-fluid" alt="rocket">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- * ========================= -->
+        <!-- * DETAILS -->
+        <!-- * ========================= -->
+
+        <section id="details">
+            <!-- VECTOR -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 1300 1916 440" fill="none">
+                <path
+                    d="M0.128887 1305.5C-2.06422 1334.69 22.8912 1395.49 139.74 1405.04C263.1 1415.13 279.456 1446.51 295.037 1476.4C297.905 1481.9 300.746 1487.36 304.222 1492.61C326.592 1526.45 362.12 1560.28 487.127 1533.41C612.134 1506.55 734.509 1497.59 827.935 1561.28C902.676 1612.23 975.027 1618 1001.63 1618C1028.23 1618 1100.58 1612.23 1175.32 1561.28C1268.75 1497.59 1391.12 1506.55 1516.13 1533.41C1641.14 1560.28 1676.67 1526.45 1699.04 1492.61C1702.51 1487.36 1705.35 1481.9 1708.22 1476.4C1723.8 1446.51 1740.16 1415.13 1863.52 1405.04C1980.37 1395.49 2005.19 1334.72 2003 1305.53V0H2001.4C1993.91 31.134 1960.24 74.134 1863.52 82.0419C1740.16 92.1276 1723.8 123.509 1708.22 153.403C1705.35 158.904 1702.51 164.355 1699.04 169.614C1676.67 203.448 1641.14 237.282 1516.13 210.414C1391.12 183.545 1268.75 174.589 1175.32 238.278C1100.58 289.228 1028.23 295 1001.63 295C975.027 295 902.676 289.228 827.935 238.278C734.509 174.589 612.134 183.545 487.127 210.414C362.12 237.282 326.592 203.448 304.222 169.614C300.746 164.355 297.905 158.904 295.037 153.403C279.456 123.509 263.1 92.1276 139.74 82.0419C43.0176 74.134 9.3476 31.134 1.86208 0H0.258341L0.128887 1305.5Z"
+                    fill="#F2F0F4" />
+            </svg>
+
+            <!-- MAIN CONTENT -->
+            <div class="content">
+                <h1 class="white" data-aos="zoom-in-up" data-aos-offset="200">Presale Details</h1>
+                <div class="cards mt-15">
+                    <!-- ITEM 1 -->
+                    <div class="cards-item" data-aos="flip-right" data-aos-offset="400">
+                        <h3>Phase One</h3>
+                        <p class="text-para-dark"><b>0/04/2025 - 16/04/2025</b></p>
+                        <p class="text-1 mt-28">1 BNB = 100000 Tokners</p>
+                        <p class="mt-10">Soft cap: <b> 5000 BNB </b></p>
+                        <p>Hard cap: <b>10000 BNB</b></p>
+                    </div>
+
+                    <!-- ITEM 2 -->
+                    <div class="cards-item" data-aos="flip-right" data-aos-offset="400">
+                        <h3>Phase Two</h3>
+                        <p class="text-para-dark"><b>0/04/2025 - 16/04/2025</b></p>
+                        <p class="text-1 mt-28">1 BNB = 100000 Tokners</p>
+                        <p class="mt-10">Soft cap: <b> 5000 BNB </b></p>
+                        <p>Hard cap: <b>10000 BNB</b></p>
+                    </div>
+
+                    <!-- ITEM 3 -->
+                    <div class="cards-item" data-aos="flip-right" data-aos-offset="400">
+                        <h3>Phase Three</h3>
+                        <p class="text-para-dark"><b>0/04/2025 - 16/04/2025</b></p>
+                        <p class="text-1 mt-28">1 BNB = 100000 Tokners</p>
+                        <p class="mt-10">Soft cap: <b> 5000 BNB </b></p>
+                        <p>Hard cap: <b>10000 BNB</b></p>
+                    </div>
+                </div>
+                <div class="images">
+                    <img loading="lazy" src="images/details/thinking-person.png" width="250" class="img-fluid"
+                        alt="thinking person">
+                    <img loading="lazy" src="images/details/double-person.png" width="260" class="img-fluid"
+                        alt="double person">
+                </div>
+                <div class="text">
+                    <h2 class="white" data-aos="zoom-in-up" data-aos-offset="200">How to buy</h2>
+                    <p class="mt-12 text-para-white" data-aos="fade-left" data-aos-offset="200">
+                        <b> First Connect your Metamask or TrustWallet to the "Connect
+                            Wallet"
+                            on the Homepage.
+                        </b>
+                    </p>
+                    <p class="mt-15 text-para-white" data-aos="fade-left" data-aos-delay="200" data-aos-offset="200">
+                        <b> Then send minimum of 0.1 BNB or maximum of 10 BNB to the
+                            Presale
+                            wallet
+                        </b>
+                    </p>
+                    <p class="mt-15 text-para-white" data-aos="fade-left" data-aos-delay="400" data-aos-offset="200">
+                        <b> Then after you will received your $Tokners to your address
+                            within
+                            24hours.
+                        </b>
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <!-- VECTOR -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 1450 1920 360" fill="none">
+            <path
+                d="M98.6108 1495.04C-18.2377 1485.49 -43.0636 1424.72 -40.8705 1395.53L-40.8705 0L1961.87 0V1395.53C1964.06 1424.72 1939.24 1485.49 1822.39 1495.04C1676.33 1506.98 1680.28 1548.78 1657.91 1582.61C1635.54 1616.45 1600.01 1650.28 1475 1623.41C1350 1596.55 1227.62 1587.59 1134.19 1651.28C1059.45 1702.23 987.102 1708 960.5 1708C933.898 1708 861.547 1702.23 786.806 1651.28C693.38 1587.59 571.005 1596.55 445.998 1623.41C320.991 1650.28 285.463 1616.45 263.093 1582.61C240.724 1548.78 244.671 1506.98 98.6108 1495.04Z"
+                fill="#1D1534" />
+            <path
+                d="M98.6108 1495.04C-18.2377 1485.49 -43.0636 1424.72 -40.8705 1395.53L-40.8705 0L1961.87 0V1395.53C1964.06 1424.72 1939.24 1485.49 1822.39 1495.04C1676.33 1506.98 1680.28 1548.78 1657.91 1582.61C1635.54 1616.45 1600.01 1650.28 1475 1623.41C1350 1596.55 1227.62 1587.59 1134.19 1651.28C1059.45 1702.23 987.102 1708 960.5 1708C933.898 1708 861.547 1702.23 786.806 1651.28C693.38 1587.59 571.005 1596.55 445.998 1623.41C320.991 1650.28 285.463 1616.45 263.093 1582.61C240.724 1548.78 244.671 1506.98 98.6108 1495.04Z"
+                fill="url(#paint0_linear_101_13)" />
+            <defs>
+                <linearGradient id="paint0_linear_101_13" x1="-41.0001" y1="68.1518" x2="2582.98" y2="572.961"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#ED374D" />
+                    <stop offset="0.505208" stop-color="#FA793F" />
+                    <stop offset="1" stop-color="#F7F651" />
+                </linearGradient>
+            </defs>
+        </svg>
+
+        <!-- MAIN CONTENT -->
+        <div class="container">
+            <div class="links" data-aos="zoom-in-up">
+                <a href="#">Our team</a>
+                <a href="#">Tokens</a>
+                <a href="#">Connect wallet</a>
+                <a href="#">Lightpaper</a>
+            </div>
+
+            <div class="bottom mt-40" data-aos="zoom-in-up" data-aos-delay="300">
+                <div class="image">
+                    <img loading="lazy" src="images/footer/main-logo-white.svg" width="220" alt="main logo">
+                </div>
+                <div class="social">
+                    <a href="#">
+                        <img loading="lazy" src="images/footer/twitter.svg" width="20" alt="">
+                    </a>
+                    <a href="#">
+                        <img loading="lazy" src="images/footer/plane.svg" width="20" alt="">
+                    </a>
+                    <a href="#">
+                        <img loading="lazy" src="images/footer/instagram.svg" width="20" alt="">
+                    </a>
+                    <a href="#">
+                        <img loading="lazy" src="images/footer/medium.svg" width="20" alt="">
+                    </a>
+                    <a href="#">
+                        <img loading="lazy" src="images/footer/github.svg" width="20" alt="">
+                    </a>
+                    <a href="#">
+                        <img loading="lazy" src="images/footer/reddit.svg" width="20" alt="">
+                    </a>
+
+                </div>
+                <div class="copyright">
+                    <p class="text-para-white">© 2025 Tokners. All rights reserved.</p>
+                    <p class="text-para-white"><img loading="lazy" src="images/footer/vector.svg" width="20"
+                            alt="vector"> Developed By
+                        <cite><strong>Shadman
+                                Jahin</strong></cite>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </body>
 

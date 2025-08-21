@@ -264,6 +264,14 @@
     /* ! COLORS */
     --primary: hsl(146, 73%, 46%);
     --secondary: hsl(211, 73%, 42%);
+
+    /* ! OTHERS */
+    --box-bg: hsla(270, 15%, 95%, 0.95);
+    --rocket-section-bg: #F2F0F4;
+    --section-bg: #1D1534;
+
+    --scrollbar-width: .7rem;
+    --scrollbar-bg: linear-gradient(#f00, #fa0);
 }
 
 
@@ -284,7 +292,10 @@ a {
     font: 700 normal 1.4rem/normal "Montserrat", sans-serif;
     text-decoration-line: underline !important;
     text-transform: uppercase;
+    outline: 0;
 }
+
+
 
 a.large {
     font: 700 normal 1.6rem/normal "Montserrat", sans-serif;
@@ -304,6 +315,7 @@ body {
 /* * ===================== */
 
 html {
+    scroll-behavior: smooth;
     font-size: 10px;
     font-family: "Montserrat", sans-serif;
 }
@@ -448,14 +460,12 @@ strong {
 /* * ======================== */
 
 .container {
-    width: clamp(min(100%, 30rem), 100%, 120rem);
+    /* max-width: 90%; */
+    width: clamp(min(100%, 30rem), 100%, 170rem) !important;
 }
 
 .narrow {
     max-width: 55rem;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .grid {
@@ -464,4 +474,20 @@ strong {
     place-content: center;
     place-items: center;
     /* gap: 4rem; */
+}
+
+
+
+/* * ====================== */
+/* * SCROLLBAR */
+/* * ====================== */
+
+::-webkit-scrollbar {
+    width: var(--scrollbar-width);
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-bg);
+    border-radius: 4rem;
 }
