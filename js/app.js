@@ -30,3 +30,17 @@ document.addEventListener('DOMContentLoaded', initializeLenis);
 AOS.init({
     duration: 1000
 });
+
+// * ======================
+// * COOKIES
+// * ======================
+
+const offcanvas = document.querySelector("#custom-cookies");
+window.addEventListener("load", () => {
+    setTimeout(() => {
+        if (offcanvas) {
+            const bsOffcanvas = new bootstrap.Offcanvas(offcanvas);
+            bsOffcanvas.show();
+        }
+    }, 10000); // 10 seconds
+});
